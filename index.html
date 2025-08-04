@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>NASA Explorer</h1>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="apod">APOD</button>
+            <button class="tab-button" data-tab="mars">Mars Rover</button>
+            <button class="tab-button" data-tab="search">Image Search</button>
+            <button class="tab-button" data-tab="eonet">EONET</button>
+        </div>
+
+        <div id="apod" class="tab-content active">
+            <h2 id="apod-title"></h2>
+            <img id="apod-image" src="" alt="Astronomy Picture of the Day">
+            <p id="apod-explanation"></p>
+        </div>
+
+        <div id="mars" class="tab-content hidden">
+            <h2>Mars Rover Photos</h2>
+            <div class="mars-photos-grid" id="mars-photos-grid"></div>
+        </div>
+
+        <div id="search" class="tab-content hidden">
+            <h2>NASA Image Search</h2>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Cari gambar NASA (e.g., Hubble, ISS)">
+                <button id="search-button">Cari</button>
+            </div>
+            <div class="search-results-grid" id="search-results-grid"></div>
+        </div>
+
+        <div id="eonet" class="tab-content hidden">
+            <h2>Natural Events Tracker</h2>
+            <div id="eonet-events-list"></div>
+        </div>
+
+        <div id="loader" class="loader hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

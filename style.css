@@ -1,0 +1,181 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0b0f19;
+    color: #e0e0e0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    background: #1a1e2a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f7f7f7;
+    font-weight: 600;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.tab-button.active {
+    color: #f7f7f7;
+    border-bottom: 2px solid #6a89cc;
+    font-weight: 600;
+}
+
+/* Konten Tab */
+.tab-content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#apod-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#apod-title, #apod-explanation {
+    margin-bottom: 15px;
+}
+
+/* Grids untuk Mars dan Search */
+.mars-photos-grid,
+.search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.mars-photo-item,
+.search-result-item {
+    background: #2b303d;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.mars-photo-item:hover,
+.search-result-item:hover {
+    transform: translateY(-5px);
+}
+
+.mars-photo-item img,
+.search-result-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* EONET List */
+#eonet-events-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.eonet-event-item {
+    background: #2b303d;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid #6a89cc;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.eonet-event-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.eonet-event-item h3 {
+    margin: 0 0 5px 0;
+    color: #c9d6ea;
+    font-size: 1.2rem;
+}
+
+.eonet-event-item p {
+    margin: 0;
+    color: #b0b0b0;
+}
+
+/* Loader */
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 30px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hidden {
+    display: none;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+}
+
+#search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background: #6a89cc;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
